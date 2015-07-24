@@ -1,5 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Audiowide);
-
+/* GOOGLE FONTS API */
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,100,100italic);
 
 @import url(http://fonts.googleapis.com/css?family=Oswald:400,300);
@@ -43,19 +42,20 @@ span:focus {
 }
 
 #wrap {
-  background: #EDEFF0;
-  color: #8D9AA5;
+  /* this set of rules make the div stretch the height of 100% */
   height: 100%;
   overflow: auto;
-  padding: 1em 2.5em;
-  text-align: center;
-  width: 60%;
   margin: 0 auto;
+
+  background: #EDEFF0;
+  color: #8D9AA5;
+  text-align: center;
+  padding: 1em 2.5em;
+  width: 60%;
 }
 
 h1 { 
   color: #5FCF80;
-  /*font-family: "Audiowide", cursive;*/
   font-family: 'Oswald', sans-serif;
   font-size: 1.4em;
   font-size: 7vw;
