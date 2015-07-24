@@ -20,6 +20,7 @@
 .tool:focus::before {
   opacity: 1;
   z-index: 100;
+  /*transform: scale(1) translateY(0);*/
 }
 
 /* create the arrow that points down */
@@ -28,8 +29,17 @@
   border-style: solid;
   border-width: 1em .75em 0 .75em;
   border-color: #3E474F transparent transparent transparent;
-  bottom: 105%;
-  margin-left: -.9em;
+  bottom: 100%;
+  margin-left: -.2em;
+
+  /* adding transform and transition with CSS3 */
+  transform: scale(.6) translate(-90%);
+  transition: all .65s cubic-bezier(.85, -0.18, .31, 1.26), opacity .65s .5s;
+}
+
+.tool:hover::before,
+.too:focus::before {
+  transition-delay: .2s;
 }
 
 /* create the speech-bubble */
@@ -42,7 +52,17 @@
   padding: 1em;
   margin-left: -5.75em;
   text-align: center;
+  /* assigned the content to the span attribute */
   content: attr(data-tip);
+  /* adding transform and transition with CSS3 */
+  transform: scale(.6) translateY(50%);
+  transition: all .65s cubic-bezier(.84, -.18,.31,1.26) .2s;
+}
+
+.tool:hover::after,
+.tool:focus::after {
+  transition-delay: 0s;
+  transform: scale(1);
 }
 
 
